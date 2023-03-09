@@ -1,4 +1,5 @@
 import "./App.css";
+//fake data from mockaroo.com
 import JSONDATA from "./MOCK_DATA.json";
 
 function App() {
@@ -8,6 +9,17 @@ function App() {
 
             {/* searchbar */}
             <input type="text" placeholder="Search..." />
+
+            {JSONDATA.map((val, key) => {
+                return (
+                    <div>
+                        <p>
+                            name: {val.name} &nbsp; price:{val.price} &nbsp;
+                            date: {val.date}
+                        </p>
+                    </div>
+                );
+            })}
         </div>
     );
 }
