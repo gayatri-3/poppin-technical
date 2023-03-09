@@ -7,6 +7,10 @@ function App() {
     //need to be able to change searchTeerm
     const [searchTerm, setSearchTerm] = useState("");
 
+    function alertAddedParty() {
+        alert("Added Random Party!");
+    }
+
     return (
         <div className="App">
             <p>Search by party name/host </p>
@@ -44,6 +48,11 @@ function App() {
                     </div>
                 );
             })}
+
+            {/* Add Random Party button  
+            Alerts user onClick that party was added*/}
+            <button onClick={alertAddedParty}> Add Random Party </button>
+            <p> Developed by: Gayatri Puppala </p>
         </div>
     );
 }
