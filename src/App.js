@@ -22,7 +22,6 @@ function App() {
             />
 
             {/* retrieve data from JSON file and display */}
-            {/* image is not workin rn */}
             {JSONDATA.filter((val) => {
                 //if nothing inputted in search bar, display all parties
                 if (searchTerm === "") {
@@ -39,7 +38,8 @@ function App() {
                     <div>
                         <p>
                             name: {val.name} &nbsp; price:{val.price} &nbsp;
-                            date: {val.date}
+                            date: {val.date} &nbsp;
+                            <img src={val.banner}></img>
                         </p>
                     </div>
                 );
